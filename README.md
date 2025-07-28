@@ -2,7 +2,7 @@
 <img src="https://raw.githubusercontent.com/PKief/vscode-material-icon-theme/ec559a9f6bfd399b82bb44393651661b08aaf7ba/icons/folder-markdown-open.svg" align="right" width="30%" style="margin: -20px 0 0 20px;">
 <h1>LSP_JWD.GIT</h1>
 <p align="left">
-    <em><code>❯ Sistem Pendaftaran dan Pengelolaan Data Peserta Uji Kompetensi Berbasis Web</code></em>
+    <em><code>❯ Sistem Pendaftaran dan Pengelolaan Data Peserta Beasiswa Berbasis Web</code></em>
 </p>
 <p align="left">
     <img src="https://img.shields.io/github/license/Rashfox/LSP_JWD.git?style=flat&logo=opensourceinitiative&logoColor=white&color=0080ff" alt="license">
@@ -38,16 +38,16 @@
 
 ## 📍 Overview
 
-LSP_JWD.GIT adalah aplikasi berbasis web untuk pendaftaran dan pengelolaan data peserta uji kompetensi. Sistem ini memudahkan proses registrasi, pengelolaan data, serta pelaporan hasil ujian secara efisien dan terstruktur.
+LSP_JWD.GIT adalah aplikasi berbasis web untuk pendaftaran dan pengelolaan data peserta beasiswa. Sistem ini memudahkan proses registrasi, pengelolaan data, serta pelaporan hasil pendaftaran beasiswa secara efisien dan terstruktur. Dengan aplikasi ini, peserta dapat mendaftar beasiswa secara online, mengunggah dokumen persyaratan, dan memantau status pendaftaran mereka.
 
 ---
 
 ## 👾 Features
 
-- Registrasi peserta uji kompetensi secara online.
-- Upload dokumen pendukung (misal: bukti legalitas, tabel data).
-- Manajemen data peserta (tambah, lihat, edit, hapus).
-- Rekapitulasi dan tampilan hasil ujian.
+- Registrasi peserta beasiswa secara online.
+- Upload dokumen pendukung (misal: bukti legalitas, dokumen persyaratan beasiswa).
+- Manajemen data peserta (tambah, lihat, edit).
+- Rekapitulasi dan tampilan hasil seleksi beasiswa.
 - Otentikasi sederhana untuk akses data.
 - Struktur kode modular dan mudah dikembangkan.
 
@@ -80,11 +80,11 @@ LSP_JWD.GIT adalah aplikasi berbasis web untuk pendaftaran dan pengelolaan data 
             </tr>
             <tr>
                 <td><b><a href='https://github.com/Rashfox/LSP_JWD.git/blob/master/index.php'>index.php</a></b></td>
-                <td>Halaman utama aplikasi, menampilkan menu dan ringkasan data peserta.</td>
+                <td>Halaman utama aplikasi, menampilkan menu dan ringkasan data peserta beasiswa.</td>
             </tr>
             <tr>
                 <td><b><a href='https://github.com/Rashfox/LSP_JWD.git/blob/master/lihat.php'>lihat.php</a></b></td>
-                <td>Menampilkan detail data peserta yang telah terdaftar.</td>
+                <td>Menampilkan detail data peserta yang telah mendaftar beasiswa.</td>
             </tr>
             <tr>
                 <td><b><a href='https://github.com/Rashfox/LSP_JWD.git/blob/master/connect.php'>connect.php</a></b></td>
@@ -92,11 +92,11 @@ LSP_JWD.GIT adalah aplikasi berbasis web untuk pendaftaran dan pengelolaan data 
             </tr>
             <tr>
                 <td><b><a href='https://github.com/Rashfox/LSP_JWD.git/blob/master/result.php'>result.php</a></b></td>
-                <td>Menampilkan hasil ujian peserta secara terstruktur.</td>
+                <td>Menampilkan hasil seleksi peserta beasiswa secara terstruktur.</td>
             </tr>
             <tr>
                 <td><b><a href='https://github.com/Rashfox/LSP_JWD.git/blob/master/daftar.php'>daftar.php</a></b></td>
-                <td>Formulir pendaftaran peserta uji kompetensi.</td>
+                <td>Formulir pendaftaran peserta beasiswa.</td>
             </tr>
             </table>
         </blockquote>
@@ -142,14 +142,14 @@ http://localhost/LSP_JWD.git/
 ```
 
 ### 🧪 Testing
-Untuk pengujian, lakukan registrasi peserta dan cek data pada halaman utama serta hasil ujian. Tidak ada test suite otomatis, pengujian dilakukan secara manual melalui browser.
+Untuk pengujian, lakukan registrasi peserta beasiswa dan cek data pada halaman utama serta hasil seleksi. Tidak ada test suite otomatis, pengujian dilakukan secara manual melalui browser.
 
 ---
 ## 📌 Project Roadmap
 
-- [X] **`Task 1`**: <strike>Implement feature one.</strike>
-- [ ] **`Task 2`**: Implement feature two.
-- [ ] **`Task 3`**: Implement feature three.
+- [X] **`Task 1`**: <strike>Implementasi fitur pendaftaran beasiswa online.</strike>
+- [ ] **`Task 2`**: Implementasi fitur seleksi dan pengumuman hasil beasiswa.
+- [ ] **`Task 3`**: Penambahan fitur notifikasi email untuk peserta.
 
 ---
 
