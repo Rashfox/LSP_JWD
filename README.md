@@ -23,6 +23,7 @@
 - [👾 Features](#-features)
 - [📁 Project Structure](#-project-structure)
   - [📂 Project Index](#-project-index)
+  - [🗄️ Database Schema](#-database-schema)
 - [🚀 Getting Started](#-getting-started)
   - [☑️ Prerequisites](#-prerequisites)
   - [⚙️ Installation](#-installation)
@@ -64,7 +65,8 @@ LSP_JWD.GIT adalah aplikasi berbasis web untuk pendaftaran dan pengelolaan data 
     ├── index.php
     ├── lihat.php
     ├── result.php
-    └── uploads
+    ├── uploads
+    └── beasiswa.sql
 ```
 
 ### 📂 Project Index
@@ -98,12 +100,41 @@ LSP_JWD.GIT adalah aplikasi berbasis web untuk pendaftaran dan pengelolaan data 
                 <td><b><a href='https://github.com/Rashfox/LSP_JWD.git/blob/master/daftar.php'>daftar.php</a></b></td>
                 <td>Formulir pendaftaran peserta beasiswa.</td>
             </tr>
+            <tr>
+                <td><b>beasiswa.sql</b></td>
+                <td>File SQL untuk membuat dan menginisialisasi database beasiswa.</td>
+            </tr>
             </table>
         </blockquote>
     </details>
 </details>
 
+### 🗄️ Database Schema
+
+File `beasiswa.sql` berisi query untuk membuat tabel utama yang dibutuhkan aplikasi. Berikut contoh isi file tersebut:
+
+```sql
+-- beasiswa.sql
+
+CREATE DATABASE IF NOT EXISTS beasiswa_db;
+USE beasiswa_db;
+
+CREATE TABLE IF NOT EXISTS peserta (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nama VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    no_hp VARCHAR(20) NOT NULL,
+    alamat TEXT NOT NULL,
+    dokumen VARCHAR(255),
+    status ENUM('pending', 'diterima', 'ditolak') DEFAULT 'pending',
+    tanggal_daftar TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Tambahkan tabel lain jika diperlukan, misal tabel admin atau log aktivitas.
+```
+
 ---
+
 ## 🚀 Getting Started
 
 ### ☑️ Prerequisites
@@ -133,6 +164,14 @@ Install LSP_JWD.git using one of the following methods:
 3. Install the project dependencies:
 
 Tidak ada dependensi eksternal, pastikan PHP dan MySQL sudah terpasang.
+
+4. Import database schema:
+
+Import file `beasiswa.sql` ke MySQL Anda, misal menggunakan phpMyAdmin atau command line:
+
+```sh
+mysql -u root -p < beasiswa.sql
+```
 
 ### 🤖 Usage
 Jalankan aplikasi dengan menaruh folder `LSP_JWD.git` di dalam direktori web server (misal: `htdocs` pada XAMPP), lalu akses melalui browser:
