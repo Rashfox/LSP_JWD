@@ -1,3 +1,7 @@
+<!-- 
+    Author  : Rizki Fajar Purnomo
+    Version : 1.0 
+-->
 <?php
 // connect.php
 

@@ -1,4 +1,8 @@
 <!-- index.php -->
+<!-- 
+    Author  : Rizki Fajar Purnomo
+    Version : 1.0 
+-->
 <html>
     <head>
         <title>LSP JWD</title>
@@ -6,6 +10,7 @@
     </head>
     <body>
         <header>
+            <!-- untuk bar navigasi -->
             <nav class="navbar navbar-expand-lg bg-body-tertiary">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="index.php">BEASISWA</a>
@@ -22,6 +27,7 @@
                 </div>
             </nav>
         </header>
+        <!-- konten utama -->
         <main class="container mt-3" style="text-align: center;" >
             <h2>Selamat Datang di Website Beasiswa</h2>
             <p>Silakan pilih jenis beasiswa untuk melanjutkan.</p>

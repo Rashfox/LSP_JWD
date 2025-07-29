@@ -1,10 +1,14 @@
+<!-- 
+    Author  : Rizki Fajar Purnomo
+    Version : 1.0 
+-->
 <?php
 // daftar.php
 // File ini digunakan untuk mendaftar beasiswa
 require 'connect.php'; // Koneksi ke database 
 require 'functions.php'; // Panggil file fungsi 
 
-const IPK_MAHASISWA = 3.4;// Contoh IPK mahasiswa, bisa diambil dari database atau inputan lain 
+const IPK_MAHASISWA = 3;// Contoh IPK mahasiswa, bisa diambil dari database atau inputan lain 
 
 $ipk = IPK_MAHASISWA;
 $disabled = ($ipk < 3) ? 'disabled' : '';// Jika IPK kurang dari 3, disable inputan jenis beasiswa dan upload berkas 
@@ -59,7 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Jika form disubmit
                 $message = '<div class="alert alert-danger mt-3" role="alert">' . $e->getMessage() . '</div>';
             }
         }
-    } else {
+    } else { // Jika IPK kurang dari 3, tampilkan pesan
         $message = '<div class="alert alert-warning mt-3" role="alert">Maaf, IPK Anda di bawah 3.0. Anda tidak dapat mendaftar beasiswa.</div>';
     }
 }
@@ -119,7 +123,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Jika form disubmit
                         <tr>
                             <td valign="middle" class="pb-2">Nomor HP</td>
                             <td valign="middle" class="pb-2">:</td>
-                            <td class="pb-2"><input class="form-control" type="number" name="nohp" max="9999999999999" required></td> </tr>
+                            <td class="pb-2"><input class="form-control" type="number" name="nohp" min="0" max="9999999999999" required></td> </tr>
                         <tr>
                             <td valign="middle" class="pb-2">Semester saat ini</td>
                             <td valign="middle" class="pb-2">:</td>

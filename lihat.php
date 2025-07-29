@@ -1,3 +1,7 @@
+<!-- 
+    Author  : Rizki Fajar Purnomo
+    Version : 1.0 
+-->
 <?php
 // lihat.php
 require_once 'connect.php'; // Koneksi ke database
@@ -111,7 +115,8 @@ if (isset($_GET['id']) && !isset($_GET['search'])) {
                                     <td><?php echo htmlspecialchars($data['jenis_beasiswa']); ?></td>
                                     <td>
                                         <?php if ($data['berkas']) { ?>
-                                            <a href="<?php echo htmlspecialchars($data['path_berkas']); ?>" target="_blank" class="btn btn-sm btn-info">Lihat Berkas</a>
+
+                                            <a href="<?php echo htmlspecialchars($data['path_berkas']); ?>" target="_blank" class="btn btn-sm btn-info">Lihat Berkas</a> 
                                         <?php } else { ?>
                                             Tidak Ada
                                         <?php } ?>

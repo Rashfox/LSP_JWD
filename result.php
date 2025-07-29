@@ -1,3 +1,7 @@
+<!-- 
+    Author  : Rizki Fajar Purnomo
+    Version : 1.0 
+-->
 <?php
 // lihat.php
 require_once 'connect.php'; // Panggil file koneksi database

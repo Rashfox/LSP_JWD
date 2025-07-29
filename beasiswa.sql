@@ -5,9 +5,11 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
+CREATE DATABASE IF NOT EXISTS `beasiswa` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 
+USE `beasiswa`;
 
-CREATE TABLE `pendaftaran` (
+CREATE TABLE `pendaftaran` ( /* Table structure for table `pendaftaran` */
   `id` int(11) NOT NULL,
   `nama` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
@@ -21,10 +23,8 @@ CREATE TABLE `pendaftaran` (
   `tanggal_daftar` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
-
 ALTER TABLE `pendaftaran`
   ADD PRIMARY KEY (`id`);
-
 
 ALTER TABLE `pendaftaran`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;

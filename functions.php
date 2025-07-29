@@ -1,3 +1,7 @@
+<!-- 
+    Author  : Rizki Fajar Purnomo
+    Version : 1.0 
+-->
 <?php
 // functions.php
 
@@ -37,7 +41,8 @@ function handleFileUpload($file, $upload_dir) {
         $file_extension = pathinfo($file['name'], PATHINFO_EXTENSION); // Ambil ekstensi file
         if (!in_array($file_extension, $allowed_extensions)) { // Cek apakah ekstensi file diizinkan
             // Jika tidak diizinkan, kembalikan pesan error
-            return ['berkas' => null, 'path_berkas' => null, 'message' => '<div class="alert alert-danger mt-3" role="alert">Ekstensi file tidak diizinkan. Hanya file dengan ekstensi ' . implode(', ', $allowed_extensions) . ' yang diperbolehkan.</div>'];
+            return ['berkas' => null, 'path_berkas' => null, 'message' => '<div class="alert alert-danger mt-3" role="alert">Ekstensi file tidak diizinkan. Hanya file dengan ekstensi ' . 
+            implode(', ', $allowed_extensions) . ' yang diperbolehkan.</div>'];
         }
         $file_name = basename($file['name']); // Ambil nama file asli
         $file_path = $upload_dir . $file_name; // Tentukan path lengkap untuk menyimpan file
